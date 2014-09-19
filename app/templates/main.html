@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="<%= extensionName %>">
+<head>
+  <meta charset="utf-8">
+  <title><%= extensionName %></title>
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+</head>
+<body class="container" ng-controller="<%= extensionName %>Ctrl">
+
+  <button type="button" class="close" onclick="studio.extension.quitDialog();"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+  <header class="container-fluid page-header">
+    <img src="icon-64.png" align="left"><h1><%= extensionName %></h1>
+  </header>
+
+  <p>hello {{test}}</p>
+
+  <p><%= answers.description %></p>
+  
+  <script src="http://localhost:35729/livereload.js"></script>
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/es5-shim/es5-shim.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/json3/lib/json3.js"></script>
+  <script src="bower_components/angular-wakanda/angular-wakanda.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- endbower -->
+  <script src="scripts/app.js"></script>
+</body>
+</html>

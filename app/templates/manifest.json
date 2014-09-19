@@ -1,0 +1,24 @@
+{"extension": {
+  "name": "<%= extensionName %>",
+  "version": "0.1.0",
+  "description": "<%= answers.description %>",
+  "icon": "HelloWorld.png",
+  "senders": [{
+      "location": "studioToolbar",
+      "icon": "icon-64.png",
+      "actionName": "CreateAngularApp"
+  },
+  {
+      "location": "codeEditorToolbar",
+      "icon": "HelloWorld.png",
+      "actionName": "say_hello"
+  }],
+  "actions": [{
+      "name": "say_hello",
+      "title": "hello"
+  }, {
+      "name": "CreateAngularApp",
+      "title": "AngularJS"
+  }],
+  "lifetime": "application_lifetime"
+}}
