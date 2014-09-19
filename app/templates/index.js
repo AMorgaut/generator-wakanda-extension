@@ -2,11 +2,11 @@ exports.handleMessage = function handleMessage(message) {
 
   switch (message.action) {
 
-  	case "say_hello":
+  	case "sayHello":
       studio.alert("Hello World!");
       break;
 
-    case 'CreateAngularApp':
+    case 'openDialog':
 	  var mainWindow = studio.extension.showModalDialog(
 	  	'main.html', 
     	[], 

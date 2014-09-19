@@ -2,23 +2,21 @@
   "name": "<%= extensionName %>",
   "version": "0.1.0",
   "description": "<%= answers.description %>",
-  "icon": "HelloWorld.png",
+  "icon": "YOUR_EXTENSION_ICON.png",
   "senders": [{
       "location": "studioToolbar",
-      "icon": "icon-64.png",
       "actionName": "CreateAngularApp"
   },
   {
       "location": "codeEditorToolbar",
-      "icon": "HelloWorld.png",
-      "actionName": "say_hello"
+      "actionName": "sayHello"
   }],
   "actions": [{
-      "name": "say_hello",
+      "name": "sayHello",
       "title": "hello"
   }, {
-      "name": "CreateAngularApp",
-      "title": "AngularJS"
+      "name": "openDialog",
+      "title": "dialog"
   }],
   "lifetime": "application_lifetime"
 }}

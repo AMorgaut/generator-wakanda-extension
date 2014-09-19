@@ -26,8 +26,10 @@ describe('wakanda-extension:app', function () {
       'manifest.json',
       '.editorconfig',
       '.jshintrc',
+      'Gruntfile.js',
       'README.md',
       'index.js',
+      'YOUR_EXTENSION_ICON.png',
       'main.html',
       'scripts/app.js'
     ]);
