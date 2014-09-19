@@ -1,16 +1,15 @@
 # generator-wakanda-extension 
-[![Build Status](https://secure.travis-ci.org/AMorgaut/generator-wakanda-extension.png?branch=master)](https://travis-ci.org/AMorgaut/generator-wakanda-extension)
+[![NPM version](https://badge.fury.io/js/generator-wakanda-extension.svg)](http://badge.fury.io/js/generator-wakanda-extension) 
+[![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](#license)
 
-> [Yeoman](http://yeoman.io) generator
+*Wakanda® and 4D® are registered trademarks of 4D SAS in France and/or other countries. All other names mentioned may be trademarks or registered trademarks of their respective owners.*
+
+> [Wakanda Studio](http://www.wakanda.org/features/studio) Extension [Yeoman](http://yeoman.io) generator
 
 
 ## Getting Started
 
 ### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
 
 Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
 
@@ -36,13 +35,26 @@ Finally, initiate the generator:
 yo wakanda-extension
 ```
 
-### Getting To Know Yeoman
+### Wakanda Studio Extension
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+Wakanda Studio Extensions are programs that can add new features to Wakanda Studio. For example, you could create a Wakanda Studio extension to insert a set of predefined comments at the beginning of a JavaScript file.
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+You write an extension using standard Web technologies, such as JavaScript, HTML, and CSS. Once you have developed a Wakanda Studio extension, you can share it with the Wakanda developer community. Our Wakanda development team has developed a few pre-installed extensions, such as "Beautifier" that you can use in the Code Editor to "beautify" your JavaScript code.
+
+Extensions can be added to Wakanda Studio's main toolbar as well as from certain contextual menus in the Solution Explorer.
+
+[Documentation](http://doc.wakanda.org/Wakanda-Studio-Extensions/Wakanda-Studio-Extensions.100-872838.en.html)
 
 
 ## License
 
-MIT
+
+*The MIT License*
+
+Copyright (c) 2014 Alexandre Morgaut. 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
