@@ -86,7 +86,7 @@ var WakandaExtensionGenerator = yeoman.generators.Base.extend({
         default: function (answers) {
           var extension, desc;
           extension = answers.extensionName || generator.extensionName;
-          desc = extension + ' Wakanda extension created trough Yeoman';
+          desc = extension + ' Wakanda extension created through Yeoman';
           return desc;
         }
       }];
@@ -124,11 +124,11 @@ var WakandaExtensionGenerator = yeoman.generators.Base.extend({
     projectfiles: function () {
       this.template('_package.json', 'package.json');
       this.template('_bower.json', 'bower.json');
-      this.template('_Gruntfile.json', 'Gruntfile.json');
       this.template('editorconfig', '.editorconfig');
       this.template('jshintrc', '.jshintrc');
       //this.template('_travis.yml', '.travis.yml');
       this.template('README.md');
+      this.src.copy('_Gruntfile.js', 'Gruntfile.js');
     },
 
     extension: function () {

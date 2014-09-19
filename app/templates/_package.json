@@ -5,7 +5,6 @@
   "license": "MIT",
   "author": {
     "name": "<%= realname %>",
-    "email": "<%= email %>",
     "url": "<%= githubUrl %>"
   },
   "repository": {
