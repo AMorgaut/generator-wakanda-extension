@@ -4,9 +4,9 @@
 'use strict';
 
 // declare a module
-var myApp = angular.module('<%= extensionName %>', []);
+var myExtension = angular.module('myExtension', []);
 
-myApp.controller('<%= extensionName %>Ctrl', function ($scope) {
+myExtension.controller('myExtensionCtrl', function ($scope) {
 
 	$scope.test = 'World (test ok from app.js)';
 	

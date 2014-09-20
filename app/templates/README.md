@@ -3,7 +3,7 @@
 
 *Wakanda® and 4D® are registered trademarks of 4D SAS in France and/or other countries. All other names mentioned may be trademarks or registered trademarks of their respective owners.*
 
-> [<%= extensionName %>](https://github.com/<%= answers.githubName %>/<%= extensionName %>) Studio Extension
+> [<%= extensionName %>](https://github.com/<%= answers.githubUser %>/<%= extensionName %>) [Wakanda](http://wakanda.org) Studio Extension
 
 ## Getting Started
 
@@ -18,11 +18,22 @@ Extensions can be added to Wakanda Studio's main toolbar as well as from certain
 [Documentation](http://doc.wakanda.org/Wakanda-Studio-Extensions/Wakanda-Studio-Extensions.100-872838.en.html)
 
 
-### How to install a Studio Extension?
+### How to install a Wakanda Studio Extension?
 
+A Wakanda Studio Extension is a set of files grouped in a single folder. To install the extension in Wakanda Studio, you just need to copy your extension's folder into the Extensions folder depending on your OS:
 
+* On Windows: %userprofile%\Documents\Wakanda\Extensions\
+For example: C:\John\Documents\Wakanda\Extensions\
+
+* On OS X: $HOME/Documents/Wakanda/Extensions/
+For example: /Users/John/Documents/Wakanda/Extensions/
+
+Extensions will be available for any Wakanda Studio application running on the machine in the user's session, including subsequent updates. This location does not need require any specific access rights.
+
+You can also use the [Add-ons Extension](http://doc.wakanda.org/Wakanda-Studio-Features/Add-ons-Extension.300-1049882.en.html) to search for a custom extension and install it directly into Wakanda.
 
 ## License
+
 
 *The MIT License*
 

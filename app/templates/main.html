@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="<%= extensionName %>">
+<html ng-app="myExtension">
 <head>
   <meta charset="utf-8">
   <title><%= extensionName %></title>
@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
 </head>
-<body class="container" ng-controller="<%= extensionName %>Ctrl">
+<body class="container" ng-controller="myExtensionCtrl">
 
   <button type="button" class="close" onclick="studio.extension.quitDialog();"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
   <header class="container-fluid page-header">
-    <img src="icon-64.png" align="left"><h1><%= extensionName %></h1>
+    <img src="YOUR_EXTENSION_ICON.png" align="left"> <h1><%= extensionName %></h1>
   </header>
 
   <p>hello {{test}}</p>

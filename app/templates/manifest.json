@@ -4,19 +4,22 @@
   "description": "<%= answers.description %>",
   "icon": "YOUR_EXTENSION_ICON.png",
   "senders": [{
-      "location": "studioToolbar",
-      "actionName": "CreateAngularApp"
-  },
-  {
-      "location": "codeEditorToolbar",
+    "location": "studioToolbar",
+    "menu": [{
+      "title": "Open Dialog",
+      "actionName": "openDialog"
+    },
+    {
+      "title": "Say hello",
       "actionName": "sayHello"
+    }]
   }],
   "actions": [{
-      "name": "sayHello",
-      "title": "hello"
+    "name": "openDialog",
+    "title": "dialog"
   }, {
-      "name": "openDialog",
-      "title": "dialog"
+    "name": "sayHello",
+    "title": "hello"
   }],
   "lifetime": "application_lifetime"
 }}
