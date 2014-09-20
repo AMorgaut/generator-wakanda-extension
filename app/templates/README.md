@@ -22,10 +22,16 @@ Extensions can be added to Wakanda Studio's main toolbar as well as from certain
 
 A Wakanda Studio Extension is a set of files grouped in a single folder. To install the extension in Wakanda Studio, you just need to copy your extension's folder into the Extensions folder depending on your OS:
 
-* On Windows: %userprofile%\Documents\Wakanda\Extensions\
+#### On Windows
+
+> %userprofile%\Documents\Wakanda\Extensions\
+
 For example: C:\John\Documents\Wakanda\Extensions\
 
-* On OS X: $HOME/Documents/Wakanda/Extensions/
+#### On OS X
+
+> $HOME/Documents/Wakanda/Extensions/
+
 For example: /Users/John/Documents/Wakanda/Extensions/
 
 Extensions will be available for any Wakanda Studio application running on the machine in the user's session, including subsequent updates. This location does not need require any specific access rights.
