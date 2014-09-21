@@ -1,5 +1,6 @@
 # generator-wakanda-extension 
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](#license)
+[![NPM version](https://badge.fury.io/js/generator-wakanda-extension.svg)](http://badge.fury.io/js/generator-wakanda-extension)
 [![Build Status](https://secure.travis-ci.org/AMorgaut/generator-wakanda-extension.svg?branch=master)](https://travis-ci.org/AMorgaut/generator-wakanda-extension)
 
 
