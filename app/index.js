@@ -136,7 +136,7 @@ var WakandaExtensionGenerator = yeoman.generators.Base.extend({
       this.src.copy('index.js', 'index.js');
       this.src.copy('YOUR_EXTENSION_ICON.png', 'YOUR_EXTENSION_ICON.png');
       this.template('manifest.json', 'manifest.json');
-      this.src.copy('manifest-schema.js', 'manifest-schema.js');
+      this.src.copy('manifest-schema.json', 'manifest-schema.json');
       this.template('main.html', 'main.html');
       this.src.copy('scripts/app.js', 'scripts/app.js');
 
