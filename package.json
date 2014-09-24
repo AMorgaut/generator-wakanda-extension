@@ -1,9 +1,9 @@
 {
   "name": "generator-wakanda-extension",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Wakanda Studio Extension Yeoman generator",
   "license": "MIT",
-  "main": "index.js",
+  "main": "app/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/AMorgaut/generator-wakanda-extension.git"
@@ -17,7 +17,8 @@
     "url": "https://github.com/AMorgaut"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
   },
   "scripts": {
     "test": "mocha"
@@ -35,7 +36,8 @@
     "yeoman-generator": "^0.17.0",
     "chalk": "^0.5.0",
     "yosay": "^0.3.0",
-    "github": "^0.2.1"
+    "github": "^0.2.1",
+    "github-username": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*"

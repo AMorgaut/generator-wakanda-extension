@@ -2,12 +2,6 @@
 
 'use strict';
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
-// 'test/spec/**/*.js'
-
 module.exports = function (grunt) {
 
   // Load grunt tasks automatically
@@ -16,19 +10,8 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   // require('time-grunt')(grunt);
 
-  // Configurable paths for the application
-  /*
-  var appConfig = {
-    app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
-  };
-  */
-
   // Define the configuration for all the tasks
   grunt.initConfig({
-
-    // Project settings
-    //yeoman: appConfig, 
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -38,13 +21,20 @@ module.exports = function (grunt) {
       },
       js: {
         files: [
-        	'main.js',
-        	'scripts/**/*.js'
+          'main.js',
+          'scripts/**/*.js'
         ],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
+      },
+      manifest: {
+        files: [
+          'manifest.json',
+          'manifest-schema.json'
+        ],
+        tasks: ['jsonlint', 'jsonschema']
       },
       jsTest: {
         files: ['test/spec/**/*.js'],
@@ -52,7 +42,7 @@ module.exports = function (grunt) {
       },
       styles: {
         files: [
-        	'styles/**/*.css'
+          'styles/**/*.css'
         ],
         tasks: [],
         options: {
@@ -114,6 +104,24 @@ module.exports = function (grunt) {
       }
     },
 
+    // Make sure json is valid
+  jsonlint: {
+    sample: {
+      src: [ 'manifest.json' ]
+    }
+  },
+
+  jsonschema: {
+    all:{
+      options: {
+          files: [{
+          file: 'manifest.json',
+          schema: 'manifest-schema.json'
+        }]
+      }
+    }
+  },
+
     // Automatically inject Bower components into the app
     wiredep: {
       options: {
@@ -122,19 +130,6 @@ module.exports = function (grunt) {
       app: {
         src: ['main.html'],
         ignorePath:  /\.\.\//
-      }
-    },
-
-    // Renames files for browser caching purposes
-    filerev: {
-      dist: {
-        src: [
-          'main.js',
-          'scripts/{,*/}*.js',
-          'styles/{,*/}*.css',
-          'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          'styles/fonts/*'
-        ]
       }
     },
 

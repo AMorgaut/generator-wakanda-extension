@@ -24,6 +24,7 @@ describe('wakanda-extension:app', function () {
       'bower.json',
       'package.json',
       'manifest.json',
+      'manifest-schema.json',
       '.editorconfig',
       '.jshintrc',
       'Gruntfile.js',

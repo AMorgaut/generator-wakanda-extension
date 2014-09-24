@@ -1,0 +1,272 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "id": "http://jsonschema.net",
+    "required": true,
+    "properties": {
+        "extension": {
+            "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#890686",
+            "description": "the main object of the Wakanda Studio Extension manifest.json file",
+            "type": "object",
+            "required": true,
+            "properties": {
+                "name": {
+                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#875014",
+                    "description": "the extension name",
+                    "type": "string",
+                    "required": true
+                },
+                "version": {
+                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#875025",
+                    "description": "the extension version",
+                    "type": "string",
+                    "required": true
+                },
+                "description": {
+                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#875031",
+                    "description": "a short description of the extension",
+                    "type": "string",
+                    "required": true
+                },
+                "icon": {
+                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#875043",
+                    "description": " the path of the default icon file (relative to the extension's folder).\nThis icon will be used if a single button is defined by the extension. In case of multiple buttons, individual icons can be defined separately through the \"senders\" object.",
+                    "type": "string",
+                    "required": false
+                },
+                "actions": {
+                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623",
+                    "description": "it contains the action name(s), title(s) and optional elements",
+                    "type": "array",
+                    "required": true,
+                    "items": {
+                        "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item",
+                        "type": "object",
+                        "required": true,
+                        "properties": {
+                            "name": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-name",
+                                "description": "Designates the action. Must be unique in \"extension\"",
+                                "type": "string",
+                                "required": true
+                            },
+                            "title": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-title",
+                                "description": "Default title for the action (i.e. the item label if the extension is a menu item)",
+                                "type": "string",
+                                "required": true
+                            },
+                            "targets": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-targets",
+                                "description": "Defines the type of file where the action could be proposed (for example, .js or .html files). If omitted, the action can be available for each type of file. Objects can contain the following property:\n\"uti\" (Uniform Type Identifier)",
+                                "type": "array",
+                                "required": false,
+                                "items": {
+                                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-targets-item",
+                                    "type": "object",
+                                    "required": false,
+                                    "properties": {
+                                        "uti": {
+                                            "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-targets-item-uti",
+                                            "description": "A Uniform Type Identifier (UTI). A text string used to uniquely identify a given class or type of item (https://developer.apple.com/library/mac/documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html#//apple_ref/doc/uid/TP40009259-SW1)",
+                                            "type": "string",
+                                            "required": true
+                                        }
+                                    }
+                                }
+                            },
+                            "trigger": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-trigger",
+                                "description": "An event object contains the \"event\" property. When an action subscribes to a studio event, then this action is triggered by this event and sent to the handleMessage Function of the index.js file.",
+                                "type": "array",
+                                "required": false,
+                                "items": {
+                                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-trigger-item",
+                                    "type": "object",
+                                    "required": false,
+                                    "properties": {
+                                        "event": {
+                                            "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-trigger-item-event",
+                                            "type": "string",
+                                            "required": true
+                                        }
+                                    }
+                                }
+                            },
+                            "shortcut": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-shortcut",
+                                "type": "array",
+                                "required": false,
+                                "items": {
+                                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-shortcut-item",
+                                    "description": "Each action may have its shortcut defined in this field. If the shortcuts defined are in conflict with the Studio's shortcuts, then priority will be given to the Studio.",
+                                    "type": "object",
+                                    "required": false,
+                                    "properties": {
+                                        "shortcutKey": {
+                                            "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-shortcut-item-shortcutKey",
+                                            "description": "Possible values: \"yes\" and \"no\". Ctrl key for Win, Command key for Mac",
+                                            "type": "string",
+                                            "required": false
+                                        },
+                                        "alternateKey": {
+                                            "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-shortcut-item-alternateKey",
+                                            "description": "Possible values: \"yes\" and \"no\"",
+                                            "type": "string",
+                                            "required": true 
+                                        },
+                                        "shiftKey": {
+                                            "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-shortcut-item-shiftKey",
+                                            "description": "Possible values: \"yes\" and \"no\"",
+                                            "type": "string",
+                                            "required": true
+                                        },
+                                        "key": {
+                                            "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#964623-item-shortcut-item-key",
+                                            "description": "Possible values: \"A\"-\"Z\", \"home\", etc.",
+                                            "type": "string",
+                                            "required": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "senders": {
+                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358",
+                    "type": "array",
+                    "required": false,
+                    "items": {
+                        "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item",
+                        "type": "object",
+                        "id": "http://jsonschema.net/extension/senders/0",
+                        "required": false,
+                        "oneOf": [
+                            {
+                              "type": "object", 
+                              "required": [ "actionName" ]
+                            }, 
+                            {
+                              "type": "object", 
+                              "required": [ "menu" ]
+                            }
+                        ],
+                        "properties": {
+                            "location": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-location",
+                                "description": "Indicates where to make the extension available. You can pass one or more values. Available strings are: \"studioToolbar\", \"solutionExplorerTreeViewContextMenu\" and/or \"codeEditorToolbar\"",
+                                "type": "string",
+                                "required": true
+                            },
+                            "actionName": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-actionName",
+                                "description": "Name of an action defined in the name property of the \"actions\" object. Use this first level actionName when it is available through a single button. Use \"menu\" property instead if you want to define a menu. \"menu\" and \"actionName\" cannot both be present.",
+                                "type": "string",
+                                "required": false
+                            },
+                            "title": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-title",
+                                "description": "Toobar icon or menu item title. If omitted, the title property of the \"actions\" object will be used as default value.",
+                                "type": "string",
+                                "required": false
+                            },
+                            "menu": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-menu",
+                                "type": "array",
+                                "required": false,
+                                "items": [
+                                    {
+                                        "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-menu-item",
+                                        "type": "object",
+                                        "required": false,
+                                        "oneOf": [
+                                            {
+                                              "type": "object", 
+                                              "required": [ "actionName" ]
+                                            }, 
+                                            {
+                                              "type": "object", 
+                                              "required": [ "menu" ]
+                                            }, 
+                                            {
+                                              "type": "object", 
+                                              "required": [ "separator" ]
+                                            }
+                                        ],
+                                        "properties": {
+                                            "actionName": {
+                                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-menu-item-actionName",
+                                                "description": "Name of an action defined in the name property of the \"actions\" object",
+                                                "type": "string",
+                                                "required": false
+                                            },
+                                            "title": {
+                                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-menu-item-title",
+                                                "description": "Menu item title. If omitted, the title property of the \"action\" object is used",
+                                                "type": "string",
+                                                "required": false
+                                            },
+                                            "menu":  {
+                                                "$ref" : "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-menu"
+                                            },
+                                            "separator": {
+                                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-menu-item-separator",
+                                                "description": "a menu item separator",
+                                                "type": "object",
+                                                "required": false,
+                                                "properties": {}
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            "icon": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-icon",
+                                "description": "Path of the picture file used as icon for the button (relative to the extension's folder).",
+                                "type": "string",
+                                "required": false
+                            },
+                            "tips": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-tips",
+                                "description": "Additional information to display when the cursor moves over the button. Used only for buttons (i.e. first-level actionName and location in studioToolbar or codeEditorToolbar).",
+                                "type": "string",
+                                "required": false
+                            },
+                            "alternateTitle": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-alternateTitle",
+                                "description": "Title to display if the action's alternative state is turned on. Used only for buttons (i.e. first-level actionName and location in studioToolbar or codeEditorToolbar).",
+                                "type": "string",
+                                "required": false
+                            },
+                            "alternateIcon": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-alternateIcon",
+                                "description": "Name of the icon file to display if the action's alternative state is turned on. Used only for buttons (i.e. first-level actionName and location in studioToolbar or codeEditorToolbar).",
+                                "type": "string",
+                                "required": false
+                            },
+                            "alternateTips": {
+                                "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#889358-item-alternateTips",
+                                "description": "Tip to display if the action's alternative state is turned on. Used only for buttons (i.e. first-level actionName and location in studioToolbar or codeEditorToolbar).",
+                                "type": "string",
+                                "required": false
+                            }
+                        }
+                    }
+                },
+                "lifetime": {
+                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#890363",
+                    "description": "allows you to define the lifetime of the JavaScript context. Two values are available: \"application_lifetime\" and \"action_lifetime\"",
+                    "type": "string",
+                    "required": true
+                },
+                "compatibleBuildVersion": {
+                    "id": "http://doc.wakanda.org/WakandaStudio0/help/Title/en/page2982.html#890387",
+                    "description": "indicates the lowest Wakanda Studio build version compatible with the extension. Note that it's a build version, not a major version. The build version can be found in the \"About Wakanda Studio\" dialog box.\nIf the Wakanda Studio build version is smaller than the indicated version, the extension will not be loaded. The extension will always be loaded if this property is omitted. It must be a digital value (not a string type).",
+                    "type": "number",
+                    "required": false
+                }
+            }
+        }
+    }
+}
