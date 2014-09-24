@@ -15,7 +15,7 @@ exports.handleMessage = function handleMessage(message) {
 	  break;
 
     default:
-  	  studio.alert("Action unknown");
+  	  studio.alert("Action unknown: " + message.action);
 
   }
 
